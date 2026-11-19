@@ -37,7 +37,7 @@ TAG = re.compile(r"v(\d+\.\d+\.\d+)")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 ENGINE_LINE = re.compile(r'^ENGINE_VERSION = "[0-9.]+"$', re.MULTILINE)
 CURRENT_URL = re.compile(
-    r"^(\s*curl -fsSLo current\.tar\.gz https://github\.com/supernovae-st/nika/releases/download/)"
+    r"^(\s*curl -fsSLo current\.tar\.gz https://github\.com/nika-open/nika/releases/download/)"
     r"v[0-9.]+/nika-linux-x64-[0-9.]+\.tar\.gz$",
     re.MULTILINE,
 )
@@ -46,7 +46,7 @@ CURRENT_SUM = re.compile(
 )
 HISTORICAL_URL = re.compile(
     r"^\s*curl -fsSLo historical\.tar\.gz "
-    r"(https://github\.com/supernovae-st/nika/releases/download/v[0-9.]+/nika-linux-x64-[0-9.]+\.tar\.gz)$",
+    r"(https://github\.com/nika-open/nika/releases/download/v[0-9.]+/nika-linux-x64-[0-9.]+\.tar\.gz)$",
     re.MULTILINE,
 )
 HISTORICAL_SUM = re.compile(

@@ -48,7 +48,7 @@ jobs:
           exit 1
       - uses: actions/checkout@v4
         with:
-          repository: supernovae-st/nika-spec
+          repository: nika-open/nika-spec
           path: .oracle
           fetch-depth: 0   # SPEC_PIN's commit must be reachable (git show <rev>)
       # The JUDGE honors the pin, not a floating HEAD — the same law the
@@ -108,10 +108,10 @@ jobs:
       - name: Fetch both pinned engines (digest-verified)
         run: |
           mkdir -p .engines/current .engines/historical
-          curl -fsSLo current.tar.gz https://github.com/supernovae-st/nika/releases/download/v0.124.4/nika-linux-x64-0.124.4.tar.gz
+          curl -fsSLo current.tar.gz https://github.com/nika-open/nika/releases/download/v0.124.4/nika-linux-x64-0.124.4.tar.gz
           echo "4ff918bf0b7ebe33f9661740546579b4cef7c330a2d3c60c689013eaa592437e  current.tar.gz" | sha256sum -c -
           tar xzf current.tar.gz -C .engines/current
-          curl -fsSLo historical.tar.gz https://github.com/supernovae-st/nika/releases/download/v0.119.0/nika-linux-x64-0.119.0.tar.gz
+          curl -fsSLo historical.tar.gz https://github.com/nika-open/nika/releases/download/v0.119.0/nika-linux-x64-0.119.0.tar.gz
           echo "34118b94159c07f0db3427eab7ff5699841518aea643990d8c0b2ebde27d21a3  historical.tar.gz" | sha256sum -c -
           tar xzf historical.tar.gz -C .engines/historical
 
@@ -180,7 +180,7 @@ jobs:
       - name: scripts/estate.py is byte-identical to nika-estate at the pinned rev
         run: |
           pin="$(grep -v '^#' ESTATE_PIN | head -1 | tr -d '[:space:]')"
-          url="https://raw.githubusercontent.com/supernovae-st/nika-estate/${pin}/scripts/estate.py"
+          url="https://raw.githubusercontent.com/nika-open/nika-estate/${pin}/scripts/estate.py"
           curl -fsSL "$url" -o /tmp/estate-canonical.py
           if ! cmp -s /tmp/estate-canonical.py scripts/estate.py; then
             echo "::error file=scripts/estate.py::diverges from nika-estate@${pin} — the tool is shared: change it upstream, bump ESTATE_PIN, re-mirror"
