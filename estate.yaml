@@ -9,7 +9,7 @@
 # Check:       python3 scripts/estate.py --check   (re-emits · byte-compares · exit 5 on divergence)
 estate_schema: 2
 mode: observation
-repo: supernovae-st/nika-registry
+repo: nika-open/nika-registry
 classes:
   authored: "a human writes here"
   authored-pin: "a hand-meaningful pin a bot lane advances via PR-only — never HEAD; the derivations' INPUT"
@@ -44,7 +44,7 @@ files:
   evidence: "hand-written PR checklist"
 - path: ".github/workflows/release-heal.yml"
   class: authored
-  sha256: 309c0ed02d04f9d2e28347465acc5850e1612941fb4b001d1a9c5bdecb6bfa07
+  sha256: 89634cedfc163d411d625ba728241f0744e2b62148630d7fa83d8c98d4a6677a
   evidence: "hand-written bot workflow (it edits OTHER files, nothing writes it)"
 - path: ".github/workflows/scorecard.yml"
   class: pinned-copy
@@ -57,7 +57,7 @@ files:
     - "supernovae-st/nika@b3e00c9201fe231f63e23745f2d4af56024da5b1:.github/workflows/scorecard.yml"
 - path: ".github/workflows/verify.yml"
   class: authored
-  sha256: 62c5d9274804cb33530facaf6620ae0bc53192e60808ac997debec9a5cb6effe
+  sha256: a1568462a8cabc111ed9a056b497c5f1379efd8b0383e29d5766b631c4537f17
   evidence: "hand-written CI trust model (comments narrate design decisions)"
   note: "release-heal.yml rewrites the engine download URL + sha256 digest lines — bot-maintained fields inside an authored file"
 - path: ".gitignore"
@@ -102,11 +102,11 @@ files:
     - "https://www.apache.org/licenses/LICENSE-2.0.txt (Apache-2.0, verbatim)"
 - path: "POLICIES.md"
   class: authored
-  sha256: 33e6e939fce87117601cd72fe9be820e8e8089ffcc4374923aa1b19cf557d12c
+  sha256: 2fce739c7f6b8c8fb13748783285403a57abb19dc44a53507d7e9cf968bd5c57
   evidence: "prose policy pack (the 8 laws) · no generation marker · gates cite it, nothing writes it"
 - path: "README.md"
   class: authored
-  sha256: 647401a1cfa8500130c74b49455cda24acc162635c51514ca80b0ea4c51e5fca
+  sha256: fa220475f620abe0b0e916610ac79fe50138c1abe253160ab3d5b8e5c62b0c84
   evidence: "prose entry surface · no generation marker · it names the generated projections (CATALOG.md · certs/ · index.json · llms.txt · badges/) without being one"
 - path: "SPEC_PIN"
   class: authored-pin
@@ -1040,7 +1040,7 @@ files:
   note: "the engine version behind these bytes is undeclared · a new verb or flag on the engine leaves them stale with nothing to say so"
 - path: "index.json"
   class: generated
-  sha256: a6796a5a12dd499fc4259955b9d99c8ff56771c0a0ef0562f910b09cf6b760ec
+  sha256: b844314bedca48e99dac77daa519f3b1e1c19cd1fd283e5b626a7ced0500df42
   evidence: "top-level `index_schema` key = the scripts/index.py build() shape; index.py writes exactly this path in --write"
   derivation:
     tool: "python3 scripts/index.py --write"
@@ -1051,7 +1051,7 @@ files:
     - "advisories/*.toml"
 - path: "llms.txt"
   class: generated
-  sha256: 5f6b56c2aaaa3bf8a06d9596a8c237063b7d3aabf20415b85a96a0a20e99c06f
+  sha256: 743919a10da3eeb901bf718a38a0acfed71fc5d5ced22c5f0d6719ce452f4850
   evidence: "byte-target of scripts/index.py render_llms() (index.py writes this path in --write; first line matches its template)"
   derivation:
     tool: "python3 scripts/index.py --write"
@@ -1651,16 +1651,16 @@ files:
 - path: "scripts/estate.py"
   class: pinned-copy
   sha256: fd4aa38f78cfacfa2e003c2d3e1b10e74b4d16d9cb9b11e87acc5a1449d2016e
-  evidence: "the shared estate tool, mirrored byte-for-byte from supernovae-st/nika-estate · editing it here is a lost gesture: change it upstream, bump ESTATE_PIN, re-mirror"
+  evidence: "the shared estate tool, mirrored byte-for-byte from nika-open/nika-estate · editing it here is a lost gesture: change it upstream, bump ESTATE_PIN, re-mirror"
   derivation:
     tool: "curl the tool from nika-estate at the rev named in ESTATE_PIN"
     gate: "the `mirror` job byte-compares scripts/estate.py against nika-estate@ESTATE_PIN and fails the run on any difference"
     inputs:
     - "ESTATE_PIN"
-    - "supernovae-st/nika-estate@<ESTATE_PIN>:scripts/estate.py"
+    - "nika-open/nika-estate@<ESTATE_PIN>:scripts/estate.py"
 - path: "scripts/estate_rules.py"
   class: authored
-  sha256: 37aed7376bad5addf295bb37a0bbe35378ef5f932666f4041f1085ff871206db
+  sha256: 454830e231e633c0ff596ea2ba20606baa36e92d3f42cae472319dd017e4e2c3
   evidence: "hand-written per-repo estate rules (this file) · the tool is shared, these declarations are ours"
 - path: "scripts/get.py"
   class: authored
@@ -1668,7 +1668,7 @@ files:
   evidence: "hand-written consume path · SPDX header + design prose"
 - path: "scripts/index.py"
   class: authored
-  sha256: 116cac394a2fa830787dae7fe99e0511746cc701a00073e7840ebd9e0e216e1c
+  sha256: 03870b42c5d7e2cead500c34e6fae67a61ec79042253ba14d7e11439dbd8837c
   evidence: "hand-written projector · SPDX header + design prose"
 - path: "scripts/orphan_gate.py"
   class: authored
@@ -1695,7 +1695,7 @@ patterns:
 - glob: "**"
   class: authored
   match_count: 12
-  aggregate_sha256: 9db713201f16ae0b32e88865c354651cba9237ea23566561e50acd37ccb88e97
+  aggregate_sha256: 5ec69da09ee18dece911ac96ba4ae7b1d2d50f8d6490138bb485cf9648637907
   evidence: "no generation marker or known role found"
   note: "unverified-default"
 unverified:
