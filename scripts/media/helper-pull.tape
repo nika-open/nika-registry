@@ -31,7 +31,7 @@ Show
 Type "# take a shared workflow by name · the helper checks it before it lands"
 Enter
 Sleep 600ms
-Type "git clone -q https://github.com/supernovae-st/nika-registry"
+Type "git clone -q https://github.com/nika-open/nika-registry"
 Enter
 Sleep 3000ms
 Type "python3 nika-registry/scripts/get.py meeting-actions"

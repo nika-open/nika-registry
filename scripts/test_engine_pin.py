@@ -82,7 +82,7 @@ class EnginePin(unittest.TestCase):
 
     def test_the_heal_reads_the_frozen_engine_it_certifies_with(self):
         url, sha = engine_pin.historical(self.verify)
-        self.assertRegex(url, r"^https://github\.com/supernovae-st/nika/releases/download/"
+        self.assertRegex(url, r"^https://github\.com/nika-open/nika/releases/download/"
                               r"v[0-9.]+/nika-linux-x64-[0-9.]+\.tar\.gz$")
         self.assertRegex(sha, r"^[0-9a-f]{64}$")
         moved = engine_pin.rewrite(self.cert, self.verify, TAG, SHA)[1]
