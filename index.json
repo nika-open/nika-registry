@@ -1538,7 +1538,7 @@
     }
   ],
   "index_schema": 2,
-  "registry": "supernovae-st/nika-registry",
+  "registry": "nika-open/nika-registry",
   "verify": {
     "how": "fetch source.repo@source.rev:source.path \u00b7 sha256 MUST equal .sha256 \u00b7 then `nika check <file>` locally",
     "never": "install anything an advisory names \u00b7 trust this index over your own hash check",

@@ -9,7 +9,7 @@
 # advisory state — everything needed to resolve, verify and install any
 # artifact, in a single GET:
 #
-#   https://raw.githubusercontent.com/supernovae-st/nika-registry/main/index.json
+#   https://raw.githubusercontent.com/nika-open/nika-registry/main/index.json
 #
 # Derived, never authored (the house projection pattern): --write
 # regenerates from registry/ + certs/ + advisories/, --check gates parity
@@ -81,7 +81,7 @@ def build() -> dict:
 
     return {
         "index_schema": INDEX_SCHEMA,
-        "registry": "supernovae-st/nika-registry",
+        "registry": "nika-open/nika-registry",
         "verify": {
             "how": "fetch source.repo@source.rev:source.path · sha256 MUST equal .sha256 · then `nika check <file>` locally",
             "raw_template": "https://raw.githubusercontent.com/{source.repo}/{source.rev}/{source.path}",
@@ -91,7 +91,7 @@ def build() -> dict:
     }
 
 
-RAW = "https://raw.githubusercontent.com/supernovae-st/nika-registry/main"
+RAW = "https://raw.githubusercontent.com/nika-open/nika-registry/main"
 
 
 def badge(a: dict) -> dict:
@@ -162,8 +162,8 @@ def render_llms(doc: dict) -> str:
         "## Optional",
         "",
         f"- [Advisories]({RAW}/advisories/README.md): the withdrawal surface — check before every install",
-        "- [The spec](https://github.com/supernovae-st/nika-spec): the language + the conformance oracle",
-        "- [The engine](https://github.com/supernovae-st/nika): `brew install supernovae-st/tap/nika`",
+        "- [The spec](https://github.com/nika-open/nika-spec): the language + the conformance oracle",
+        "- [The engine](https://github.com/nika-open/nika): `brew install nika-open/tap/nika`",
         "",
     ]
     return "\n".join(lines)
