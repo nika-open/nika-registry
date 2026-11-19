@@ -98,7 +98,7 @@ it with an advisory tombstone and adds the new name. First-party
 projections obey the same immutability as everyone else · the projector
 gets no carve-out.
 
-**Why** · the code-review ghost ([#21](https://github.com/supernovae-st/nika-registry/issues/21)):
+**Why** · the code-review ghost ([#21](https://github.com/nika-open/nika-registry/issues/21)):
 `project_pack.py` pruned a renamed showcase silently, stranding its
 cert + badge as orphans no drift gate could see · law 1 violated by our
 own tooling, caught only by the estate observation, 16 days later.

@@ -15,13 +15,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/supernovae-st/nika-registry/actions/workflows/verify.yml"><img src="https://github.com/supernovae-st/nika-registry/actions/workflows/verify.yml/badge.svg?branch=main" alt="verify: the re-proof"></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsupernovae-st%2Fnika-registry%2Fmain%2Fbadges%2Fcatalog.json" alt="artifacts re-proven"></a>
-  <a href="https://github.com/supernovae-st/nika-spec/blob/main/registry/registry-v0.1.md"><img src="https://img.shields.io/badge/contract-registry--v0.1-blue" alt="contract registry-v0.1"></a>
-  <a href="https://github.com/supernovae-st/nika/releases/latest"><img src="https://img.shields.io/github/v/release/supernovae-st/nika?label=engine" alt="Engine release"></a>
+  <a href="https://github.com/nika-open/nika-registry/actions/workflows/verify.yml"><img src="https://github.com/nika-open/nika-registry/actions/workflows/verify.yml/badge.svg?branch=main" alt="verify: the re-proof"></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnika-open%2Fnika-registry%2Fmain%2Fbadges%2Fcatalog.json" alt="artifacts re-proven"></a>
+  <a href="https://github.com/nika-open/nika-spec/blob/main/registry/registry-v0.1.md"><img src="https://img.shields.io/badge/contract-registry--v0.1-blue" alt="contract registry-v0.1"></a>
+  <a href="https://github.com/nika-open/nika/releases/latest"><img src="https://img.shields.io/github/v/release/nika-open/nika?label=engine" alt="Engine release"></a>
   <a href="https://docs.nika.sh"><img src="https://img.shields.io/badge/docs-docs.nika.sh-8b8cf8.svg" alt="Documentation"></a>
   <br>
-  <a href="https://scorecard.dev/viewer/?uri=github.com/supernovae-st/nika-registry"><img src="https://api.scorecard.dev/projects/github.com/supernovae-st/nika-registry/badge" alt="OpenSSF Scorecard"></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/nika-open/nika-registry"><img src="https://api.scorecard.dev/projects/github.com/nika-open/nika-registry/badge" alt="OpenSSF Scorecard"></a>
   <a href="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/supernovae-st/nika-registry"><img src="https://archive.softwareheritage.org/badge/origin/https://github.com/supernovae-st/nika-registry/" alt="Archived by Software Heritage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
 </p>
@@ -29,8 +29,8 @@
 <!-- engine clips: served from the engine repository's main branch (media/), so they follow its latest render, not a release tag -->
 <p align="center"><b>Watch a workflow audited before anything runs, then run on a local model.</b></p>
 <p align="center">
-  <a href="https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/nika-hero.optimized.gif">
-    <img src="https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/nika-hero.optimized.gif"
+  <a href="https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/nika-hero.optimized.gif">
+    <img src="https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/nika-hero.optimized.gif"
          alt="nika check audits a meeting-notes workflow before anything runs, then nika run executes it on a local model and writes the owners, tasks and due dates it found" width="960">
   </a>
 </p>
@@ -75,7 +75,7 @@ Three steps, about two minutes, no API key.
 **1 · Install the engine** (macOS or Linux · [other ways to install](https://docs.nika.sh/getting-started/installation)).
 
 ```sh
-brew install supernovae-st/tap/nika
+brew install nika-open/tap/nika
 ```
 
 **2 · Get a shared workflow by name.** The helper script finds the entry,
@@ -87,7 +87,7 @@ install PyYAML in a virtual environment first:
 `python3 -m venv .venv && . .venv/bin/activate && pip install pyyaml`.
 
 ```sh
-git clone https://github.com/supernovae-st/nika-registry
+git clone https://github.com/nika-open/nika-registry
 python3 nika-registry/scripts/get.py meeting-actions
 ```
 
@@ -153,8 +153,8 @@ then a rehearsal and its record.**
 **Watch `nika try` list the ready-made jobs built into the engine.**
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/workflow-gallery.optimized.gif">
-    <img src="https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/workflow-gallery.optimized.gif"
+  <a href="https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/workflow-gallery.optimized.gif">
+    <img src="https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/workflow-gallery.optimized.gif"
          alt="The nika try gallery: the showcase jobs built into the engine, from bookmark-triage to transcript-shownotes" width="860">
   </a>
 </p>
@@ -163,14 +163,14 @@ then a rehearsal and its record.**
 **Watch the check refuse a task that reaches outside its permits.**
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/permits-audit.optimized.gif">
-    <img src="https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/permits-audit.optimized.gif"
+  <a href="https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/permits-audit.optimized.gif">
+    <img src="https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/permits-audit.optimized.gif"
          alt="A workflow's permits drawn as a map of what each task may reach, with the audit card beside it: the check catches the task that reaches outside them, and the widened boundary passes" width="860">
   </a>
 </p>
 <p align="center"><sub><b>See what it may touch.</b> A workflow's <code>permits:</code> drawn as a map, and the escape the check catches. Notice the one task that fetches from a host outside the declared boundary, refused before anything runs (<code>NIKA-SEC-004</code>), then the widened boundary passing. The check output is captured from the real CLI, whose release the clip's footer names; the map is drawn from the file.</sub></p>
 
-▶ [Caught before it runs: watch `nika check` find two defects, then pass the fixed file](https://raw.githubusercontent.com/supernovae-st/nika/main/media/gifs/static-check-fix.optimized.gif)
+▶ [Caught before it runs: watch `nika check` find two defects, then pass the fixed file](https://raw.githubusercontent.com/nika-open/nika/main/media/gifs/static-check-fix.optimized.gif)
 
 ## Find a workflow
 
@@ -240,7 +240,7 @@ A few to start with, all published by `supernovae-st` at version `0.2.0`:
 - Released engines, the 0.123.0 reference release included, stop at the
   index check (`NIKA-REG-005`) before any of the steps below. The steps
   describe the
-  [registry-v0.1](https://github.com/supernovae-st/nika-spec/blob/main/registry/registry-v0.1.md)
+  [registry-v0.1](https://github.com/nika-open/nika-spec/blob/main/registry/registry-v0.1.md)
   contract and the engine's refusal codes, for mirrors and other clients.
 - `nika check` and `nika run` take `registry:<owner>/<name>`, with an
   optional `@<version>`. The owner is required.
@@ -312,11 +312,11 @@ outputs:
   first, and never skip the hash check.
 - Every workflow has a live certificate badge, served from
   `badges/<owner>--<name>.json`. For example
-  ![nika cert](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsupernovae-st%2Fnika-registry%2Fmain%2Fbadges%2Fsupernovae-st--meeting-actions.json)
+  ![nika cert](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnika-open%2Fnika-registry%2Fmain%2Fbadges%2Fsupernovae-st--meeting-actions.json)
   comes from:
 
   ```markdown
-  ![nika cert](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/supernovae-st/nika-registry/main/badges/<owner>--<name>.json)
+  ![nika cert](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/nika-open/nika-registry/main/badges/<owner>--<name>.json)
   ```
 
 </details>
@@ -382,7 +382,7 @@ intent.
 
 > [!NOTE]
 > The `supernovae-st/*` entries are generated from the example pack of the
-> [language spec](https://github.com/supernovae-st/nika-spec) by
+> [language spec](https://github.com/nika-open/nika-spec) by
 > `scripts/project_pack.py`, so they cannot drift from it: to add a
 > first-party workflow, add a showcase to the spec. Entries under your own
 > owner name are yours to write. Full rules: [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -412,7 +412,7 @@ is gone from the tree; nobody can publish it again. To report a bad version,
 open an issue with the **Advisory** template.
 
 The format is an open contract,
-[registry-v0.1](https://github.com/supernovae-st/nika-spec/blob/main/registry/registry-v0.1.md),
+[registry-v0.1](https://github.com/nika-open/nika-spec/blob/main/registry/registry-v0.1.md),
 part of the Apache-2.0 language spec, so a mirror, a fork or an in-house
 registry can follow the same rules.
 
@@ -448,7 +448,7 @@ consumer does, so a vanished commit or a rewritten history turns it red.
 <details>
 <summary><b>Replay the checks on your machine</b></summary>
 
-You need a clone of [nika-spec](https://github.com/supernovae-st/nika-spec)
+You need a clone of [nika-spec](https://github.com/nika-open/nika-spec)
 that contains the commit in `SPEC_PIN`.
 
 ```sh
@@ -517,18 +517,18 @@ gate re-proves the heal like any other pull request.
 
 | | Repository | What it gives you |
 |---|---|---|
-| 🦋 | [nika](https://github.com/supernovae-st/nika) | The engine and CLI: write, check, run and verify AI workflows |
-| 📖 | [nika-docs](https://github.com/supernovae-st/nika-docs) | The documentation, live at [docs.nika.sh](https://docs.nika.sh) |
-| 📜 | [nika-spec](https://github.com/supernovae-st/nika-spec) | The language specification and the suite that proves an engine follows it |
-| 🧩 | [nika-vscode](https://github.com/supernovae-st/nika-vscode) | The editor extension, frozen at 0.120 and not qualified with 0.123: use `nika lsp` and the JSON Schema |
-| 🟦 | [nika-client](https://github.com/supernovae-st/nika-client) | Run and verify workflows from TypeScript |
-| ✅ | [nika-action](https://github.com/supernovae-st/nika-action) | A GitHub Action that posts a `nika check` verdict on your pull requests |
-| 🚀 | [nika-actions-starter](https://github.com/supernovae-st/nika-actions-starter) | A ready template: workflows, editor setup and CI from the first push |
-| 📦 | **[nika-registry](https://github.com/supernovae-st/nika-registry)** | **Shareable workflows, pinned and re-verified** |
-| 🤖 | [nika-plugins](https://github.com/supernovae-st/nika-plugins) | Teaches your coding agent (Claude Code, Codex, Cursor…) to write Nika |
-| 🍺 | [homebrew-tap](https://github.com/supernovae-st/homebrew-tap) | `brew install supernovae-st/tap/nika` |
-| 🐙 | [gh-nika](https://github.com/supernovae-st/gh-nika) | The Nika CLI as a GitHub CLI extension |
-| 🏛️ | [nika-estate](https://github.com/supernovae-st/nika-estate) | Where each file in Nika's core repositories comes from, declared and re-checkable |
+| 🦋 | [nika](https://github.com/nika-open/nika) | The engine and CLI: write, check, run and verify AI workflows |
+| 📖 | [nika-docs](https://github.com/nika-open/nika-docs) | The documentation, live at [docs.nika.sh](https://docs.nika.sh) |
+| 📜 | [nika-spec](https://github.com/nika-open/nika-spec) | The language specification and the suite that proves an engine follows it |
+| 🧩 | [nika-vscode](https://github.com/nika-open/nika-vscode) | The editor extension, frozen at 0.120 and not qualified with 0.123: use `nika lsp` and the JSON Schema |
+| 🟦 | [nika-client](https://github.com/nika-open/nika-client) | Run and verify workflows from TypeScript |
+| ✅ | [nika-action](https://github.com/nika-open/nika-action) | A GitHub Action that posts a `nika check` verdict on your pull requests |
+| 🚀 | [nika-actions-starter](https://github.com/nika-open/nika-actions-starter) | A ready template: workflows, editor setup and CI from the first push |
+| 📦 | **[nika-registry](https://github.com/nika-open/nika-registry)** | **Shareable workflows, pinned and re-verified** |
+| 🤖 | [nika-plugins](https://github.com/nika-open/nika-plugins) | Teaches your coding agent (Claude Code, Codex, Cursor…) to write Nika |
+| 🍺 | [homebrew-tap](https://github.com/nika-open/homebrew-tap) | `brew install nika-open/tap/nika` |
+| 🐙 | [gh-nika](https://github.com/nika-open/gh-nika) | The Nika CLI as a GitHub CLI extension |
+| 🏛️ | [nika-estate](https://github.com/nika-open/nika-estate) | Where each file in Nika's core repositories comes from, declared and re-checkable |
 <!-- /city:map -->
 
 ## License, security and contributing
