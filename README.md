@@ -22,7 +22,7 @@
   <a href="https://docs.nika.sh"><img src="https://img.shields.io/badge/docs-docs.nika.sh-8b8cf8.svg" alt="Documentation"></a>
   <br>
   <a href="https://scorecard.dev/viewer/?uri=github.com/nika-open/nika-registry"><img src="https://api.scorecard.dev/projects/github.com/nika-open/nika-registry/badge" alt="OpenSSF Scorecard"></a>
-  <a href="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/supernovae-st/nika-registry"><img src="https://archive.softwareheritage.org/badge/origin/https://github.com/supernovae-st/nika-registry/" alt="Archived by Software Heritage"></a>
+  <a href="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/nika-open/nika-registry"><img src="https://archive.softwareheritage.org/badge/origin/https://github.com/nika-open/nika-registry/" alt="Archived by Software Heritage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
 </p>
 
