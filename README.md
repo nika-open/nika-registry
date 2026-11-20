@@ -538,7 +538,7 @@ gate re-proves the heal like any other pull request.
   `license` field.
 - **Security.** Report a vulnerability privately to
   **security@supernovae.studio**, never in a public issue; the
-  [organization's security policy](https://github.com/supernovae-st/.github/blob/main/SECURITY.md)
+  [organization's security policy](https://github.com/nika-open/.github/blob/main/SECURITY.md)
   covers this repository. A bad entry version is withdrawn through an
   [advisory](advisories/README.md).
 - **Contributing.** Read [CONTRIBUTING.md](CONTRIBUTING.md) and
