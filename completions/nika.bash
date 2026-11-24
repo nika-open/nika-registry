@@ -2096,12 +2096,24 @@ _nika() {
             return 0
             ;;
         nika__subcmd__mcp__subcmd__approve)
-            opts="-h --color --hyperlink --ascii --plain --help"
+            opts="-h --reads-private --sends-out --no-role --color --hyperlink --ascii --plain --help"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 3 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0
             fi
             case "${prev}" in
+                --reads-private)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --sends-out)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --no-role)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
                 --color)
                     COMPREPLY=($(compgen -W "always never auto" -- "${cur}"))
                     return 0
@@ -2444,7 +2456,7 @@ _nika() {
             return 0
             ;;
         nika__subcmd__serve)
-            opts="-h --once --dry --now --until --bind --workflows --allow-remote --token-file --state-root --authoring-model --authoring-max-tokens --authoring-timeout --authoring-deadline --authoring-repairs --knowledge --knowledge-exclude --no-knowledge --authoring-reasoning --decision-model --authoring-max-calls --cost-review --run-cost-ceiling --cost-policy --sessions --color --hyperlink --ascii --plain --help"
+            opts="-h --once --dry --now --until --bind --workflows --allow-remote --token-file --state-root --job-retention --job-retention-unsuccessful --max-concurrent-jobs --queue-capacity --max-jobs --max-queued-per-owner --max-concurrent-per-owner --shutdown-grace --retry-interrupted --retry-max-attempts --provider-concurrency --authoring-model --authoring-max-tokens --authoring-timeout --authoring-deadline --authoring-repairs --knowledge --knowledge-exclude --no-knowledge --authoring-reasoning --decision-model --authoring-max-calls --cost-review --run-cost-ceiling --cost-policy --sessions --color --hyperlink --ascii --plain --help"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 2 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0
@@ -2471,6 +2483,50 @@ _nika() {
                     return 0
                     ;;
                 --state-root)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --job-retention)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --job-retention-unsuccessful)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --max-concurrent-jobs)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --queue-capacity)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --max-jobs)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --max-queued-per-owner)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --max-concurrent-per-owner)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --shutdown-grace)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --retry-interrupted)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --retry-max-attempts)
+                    COMPREPLY=($(compgen -f "${cur}"))
+                    return 0
+                    ;;
+                --provider-concurrency)
                     COMPREPLY=($(compgen -f "${cur}"))
                     return 0
                     ;;
