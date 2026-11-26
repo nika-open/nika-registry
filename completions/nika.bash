@@ -704,7 +704,7 @@ _nika() {
             return 0
             ;;
         nika__subcmd__catalog)
-            opts="-h --json --tools --color --hyperlink --ascii --plain --help"
+            opts="-h --json --tools --mcp --color --hyperlink --ascii --plain --help"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 2 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0

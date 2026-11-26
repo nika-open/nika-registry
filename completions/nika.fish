@@ -485,6 +485,7 @@ never\t'Force hyperlinks off'
 auto\t'TTY + `TERM != dumb` — never to pipes (the default)'"
 complete -c nika -n "__fish_nika_using_subcommand catalog" -l json -d 'Emit the versioned machine projection (`catalog_version: 1`)'
 complete -c nika -n "__fish_nika_using_subcommand catalog" -l tools -d 'The `nika:*` builtin tool catalog instead (what `invoke` reaches without MCP — the old `tools` verb, one roof)'
+complete -c nika -n "__fish_nika_using_subcommand catalog" -l mcp -d 'The MCP server shelf instead: tool hubs and vendor servers, how each is reached (package or hosted remote), the env var names it reads and the date it was last verified'
 complete -c nika -n "__fish_nika_using_subcommand catalog" -l ascii -d 'Force the ASCII glyph twins everywhere (CI logs · legacy terminals) — colour stays; `--plain` is the full sober umbrella'
 complete -c nika -n "__fish_nika_using_subcommand catalog" -l plain -d 'The sober umbrella — one flag for scripts, CI and transcripts: colour off · ASCII glyphs · hyperlinks off · no animation (`run` renders its plain storyboard). The same result as `--color never --hyperlink never` plus every verb\'s `--ascii`/`--no-progress`'
 complete -c nika -n "__fish_nika_using_subcommand catalog" -s h -l help -d 'Print help (see more with \'--help\')'
